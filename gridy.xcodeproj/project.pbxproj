@@ -14,11 +14,6 @@
 		079AE09E22E87CD700A207A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 079AE09C22E87CD700A207A1 /* Main.storyboard */; };
 		079AE0A022E87CDA00A207A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 079AE09F22E87CDA00A207A1 /* Assets.xcassets */; };
 		079AE0A322E87CDA00A207A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 079AE0A122E87CDA00A207A1 /* LaunchScreen.storyboard */; };
-		079AE0B422E8802B00A207A1 /* Gridy-style-guide.png in Resources */ = {isa = PBXBuildFile; fileRef = 079AE0AA22E8802A00A207A1 /* Gridy-style-guide.png */; };
-		079AE0B622E8802B00A207A1 /* Gridy-lookup.png in Resources */ = {isa = PBXBuildFile; fileRef = 079AE0AC22E8802A00A207A1 /* Gridy-lookup.png */; };
-		079AE0B722E8802B00A207A1 /* Gridy-name-large-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 079AE0AD22E8802A00A207A1 /* Gridy-name-large-green.png */; };
-		079AE0B822E8802B00A207A1 /* Gridy-library.png in Resources */ = {isa = PBXBuildFile; fileRef = 079AE0AE22E8802A00A207A1 /* Gridy-library.png */; };
-		079AE0BD22E8802B00A207A1 /* Gridy-name-small-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 079AE0B322E8802B00A207A1 /* Gridy-name-small-green.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +26,6 @@
 		079AE09F22E87CDA00A207A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		079AE0A222E87CDA00A207A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		079AE0A422E87CDA00A207A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		079AE0AA22E8802A00A207A1 /* Gridy-style-guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Gridy-style-guide.png"; path = "Assets.xcassets/Image.imageset/Gridy-style-guide.png"; sourceTree = "<group>"; };
-		079AE0AC22E8802A00A207A1 /* Gridy-lookup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Gridy-lookup.png"; path = "Assets.xcassets/Image.imageset/Gridy-lookup.png"; sourceTree = "<group>"; };
-		079AE0AD22E8802A00A207A1 /* Gridy-name-large-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Gridy-name-large-green.png"; path = "Assets.xcassets/Image.imageset/Gridy-name-large-green.png"; sourceTree = "<group>"; };
-		079AE0AE22E8802A00A207A1 /* Gridy-library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Gridy-library.png"; path = "Assets.xcassets/Image.imageset/Gridy-library.png"; sourceTree = "<group>"; };
-		079AE0B322E8802B00A207A1 /* Gridy-name-small-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Gridy-name-small-green.png"; path = "Assets.xcassets/Image.imageset/Gridy-name-small-green.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,13 +62,8 @@
 				079AE09A22E87CD700A207A1 /* ViewController.swift */,
 				070E3D91230D1E8800EDBD16 /* ViewControllerTwo.swift */,
 				079AE09C22E87CD700A207A1 /* Main.storyboard */,
-				079AE0AC22E8802A00A207A1 /* Gridy-lookup.png */,
 				078EAEA722EB51CC00971C47 /* pictureUploadEdit.swift */,
-				079AE0AD22E8802A00A207A1 /* Gridy-name-large-green.png */,
-				079AE0AE22E8802A00A207A1 /* Gridy-library.png */,
-				079AE0B322E8802B00A207A1 /* Gridy-name-small-green.png */,
 				079AE09F22E87CDA00A207A1 /* Assets.xcassets */,
-				079AE0AA22E8802A00A207A1 /* Gridy-style-guide.png */,
 				079AE0A122E87CDA00A207A1 /* LaunchScreen.storyboard */,
 				079AE0A422E87CDA00A207A1 /* Info.plist */,
 			);
@@ -143,12 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				079AE0B422E8802B00A207A1 /* Gridy-style-guide.png in Resources */,
 				079AE0A322E87CDA00A207A1 /* LaunchScreen.storyboard in Resources */,
-				079AE0B622E8802B00A207A1 /* Gridy-lookup.png in Resources */,
-				079AE0B722E8802B00A207A1 /* Gridy-name-large-green.png in Resources */,
-				079AE0BD22E8802B00A207A1 /* Gridy-name-small-green.png in Resources */,
-				079AE0B822E8802B00A207A1 /* Gridy-library.png in Resources */,
 				079AE0A022E87CDA00A207A1 /* Assets.xcassets in Resources */,
 				079AE09E22E87CD700A207A1 /* Main.storyboard in Resources */,
 			);

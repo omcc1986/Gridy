@@ -14,14 +14,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     //MARK: Variables
     let picker = UIImagePickerController()
-    var localImages = [UIImage]()
+    var localImages = ["Random-Boats", "Random-Car", "Random-Crocodile", "Random-Park","Random-TShirts"]
+  
+    let random = Int(arc4random_uniform(4))
+
     var toPass = UIImage()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
     }
     
+        
     //MARK: IBActions
     @IBAction func cameraPhoto(_ sender: UIButton) {
         AccessCamera()
@@ -32,23 +36,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func pickImage(_ sender: UIButton) {
-        // do nothing
+   
+      selectedImage = localImages[random]
+       
     }
-    
-    //MARK: Functions
-    func randomImage() -> UIImage? {
-        let currentImage = toPass
-        if localImages.count > 0 {
-            while true {
-                let newImage = localImages[Int.random(in: 0...localImages.count)]
-                if newImage != currentImage {
-                    return newImage
-                }
-            }
-        }
-        troubleAlert(message: "There are no local images to be randomized")
-        return nil
-    }
+        
     
     func troubleAlert(message: String?) {
         let alert = UIAlertController(title: "Oops...", message: message, preferredStyle: .alert)
@@ -125,6 +117,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.performSegue(withIdentifier: "segue", sender: self)
         }
     }
+    
+
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segue" {

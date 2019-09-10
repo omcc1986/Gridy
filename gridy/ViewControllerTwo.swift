@@ -13,7 +13,6 @@ class ViewControllerTwo: UIViewController {
     
     // Our received data
     var receivedImage = UIImage()
-    var username: String = "Anonymous"
     
     // UIImage
     @IBOutlet weak var selectedImage: UIImageView!
