@@ -9,19 +9,21 @@
 import Foundation
 import UIKit
 
-class ViewControllerTwo: UIViewController {
+class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
     
     // Our received data
     var receivedImage = UIImage()
     
     // UIImage
     @IBOutlet weak var selectedImage: UIImageView!
-   
+     
     // Standard viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedImage.image = receivedImage
       }
 }
+
+
 
 

@@ -14,12 +14,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     //MARK: Variables
     let picker = UIImagePickerController()
-    var localImages = ["Random-Boats", "Random-Car", "Random-Crocodile", "Random-Park","Random-TShirts"]
-  
-    let random = Int(arc4random_uniform(4))
 
-    var toPass = UIImage()
+//    var outGoingingImage: UIImage?
 
+//    var toPass = UIImage()
+    
+    var outGoingImage: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
@@ -37,8 +38,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func pickImage(_ sender: UIButton) {
    
-      selectedImage = localImages[random]
-       
+        let localImages = [UIImage(named: "Random-Boats"),UIImage(named: "Random-Car"), UIImage(named: "Random-Crocodile"), UIImage(named: "Random-Park"), UIImage(named: "Random-TShirts")]
+        
+        let imgIndex = Int.random(in: 0...localImages.count - 1)
+        outGoingImage = localImages[imgIndex]
+        performSegue(withIdentifier: "segue", sender: self)
+        
     }
         
     
@@ -111,7 +116,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let newImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         if let image = newImage {
-            toPass = image
+            outGoingImage = image
         }
         picker.dismiss(animated: true) {
             self.performSegue(withIdentifier: "segue", sender: self)
@@ -124,7 +129,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segue" {
             let vc = segue.destination as! ViewControllerTwo
-            vc.receivedImage = toPass
+            vc.receivedImage = outGoingImage!
         }
     }
 }
