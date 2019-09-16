@@ -124,9 +124,16 @@
                                 <rect key="frame" x="20" y="185" width="374" height="370"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4c3-0H-YE4">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4c3-0H-YE4">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="370"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="jnO-nM-WcX" appends="YES" id="oDj-JV-Z6X"/>
+                                            <outletCollection property="gestureRecognizers" destination="eZL-Yq-wgq" appends="YES" id="v8K-Ea-sVI"/>
+                                            <outletCollection property="gestureRecognizers" destination="UyY-VQ-tRi" appends="YES" id="vI2-r5-3VP"/>
+                                            <outletCollection property="gestureRecognizers" destination="mGD-mf-UzB" appends="YES" id="2m4-ba-ka2"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.16697880993150685" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -173,6 +180,26 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uxn-BE-1NN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <rotationGestureRecognizer id="jnO-nM-WcX">
+                    <connections>
+                        <action selector="handleRotation:" destination="JVK-Il-m53" id="TQr-sd-tQB"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="eZL-Yq-wgq">
+                    <connections>
+                        <action selector="handlePan:" destination="JVK-Il-m53" id="Za7-wG-Lq2"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="UyY-VQ-tRi">
+                    <connections>
+                        <action selector="handlePinch:" destination="JVK-Il-m53" id="Dsc-bh-8BF"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <tapGestureRecognizer id="mGD-mf-UzB">
+                    <connections>
+                        <action selector="gestureRecognizer:" destination="JVK-Il-m53" id="hrk-dX-DoU"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="666.66666666666674" y="83.705357142857139"/>
         </scene>
