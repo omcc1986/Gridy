@@ -13,9 +13,31 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
     
     // Our received data
     var receivedImage = UIImage()
+    var imageForGridy = UIImage()
+    var outGoingVC3 = UIImage()
+    var userChosenImage = UIImage()
     
     // UIImage
     @IBOutlet weak var selectedImage: UIImageView!
+    
+    
+    // Standard viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        selectedImage.image = receivedImage
+    }
+    
+    
+//    @IBAction func startButton(_ sender: Any) {
+    
+    @IBAction func startButton(_ sender: Any) {
+    
+    performSegue(withIdentifier: "seguetwo", sender: self)
+        selectedImage.transform = .identity
+    }
+    
+    
+
     
     @IBAction func handlePan(_ recognizer: UIPanGestureRecognizer) {
         guard let recognizerView = recognizer.view else {
@@ -35,11 +57,11 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
 
     @IBAction func handleRotation(_ recognizer: UIRotationGestureRecognizer) {
     selectedImage.transform = selectedImage.transform.rotated(by: recognizer.rotation)
-            recognizer.rotation = 0
+        recognizer.rotation = 0
     }
 
-    internal func gestureRecognizer(_  gestureReconizer: UIGestureRecognizer,
-                                shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer)
+    internal func gestureRecognizer(_  gestureReconizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer)
+    
     -> Bool {
         //condition for simultanious gesture
         if gestureReconizer.view != selectedImage{
@@ -53,12 +75,46 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
         }
         
         return true
-}
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        guard let pickedImage = info[.originalImage] as? UIImage else {
+            fatalError("Expected a dictionary containing an image, but was provided with the following: \(info)")
+        }
+        imageForGridy = pickedImage
+        processPicked(image: imageForGridy)
+    }
+ // selectedImage
+    func processPicked(image: UIImage?) {
+        if let newImage = image {
+            performSegue(withIdentifier: "segueTwo", sender: self)
+        }
 
-    // Standard viewDidLoad()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        selectedImage.image = receivedImage
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
       }
 
+   }
 }
+//
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        let newImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+//        if let image = newImage {
+//            imageForGridy = image
+//        }
+//        picker.dismiss(animated: true) {
+//            self.performSegue(withIdentifier: "segue2", sender: self)
+//        }
+//    }
+//
+//
+//
+//    override func prepare(for segue2: UIStoryboardSegue, sender: Any?) {
+//        if segue2.identifier == "segue2" {
+//            let vc = segue2.destination as! ViewControllerThree
+//            vc.outGoingVC3  = imageForGridy
+//        }
+//    }
+//}
