@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -115,9 +113,9 @@
         <!--View Controller Two-->
         <scene sceneID="vzc-Ub-JZn">
             <objects>
-                <viewController id="JVK-Il-m53" customClass="ViewControllerTwo" customModule="gridy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerTwo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JVK-Il-m53" customClass="ViewControllerTwo" customModule="gridy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dXv-JL-Duf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7BC-dG-VTe" userLabel="startButton">
@@ -137,7 +135,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="startButton:" destination="JVK-Il-m53" eventType="touchUpInside" id="gu8-D8-QHn"/>
-                                    <segue destination="xJi-z6-Rbh" kind="show" identifier="segueTwo" id="bGd-XQ-yPf"/>
+                                    <segue destination="LP2-RF-qir" kind="show" identifier="segueTwo" id="IOP-XA-fwn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adjust the puzzle image: zoom, rotate, reposition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tmt-ks-J3L">
@@ -198,29 +196,37 @@
             </objects>
             <point key="canvasLocation" x="666.66666666666674" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="4Tf-ic-Hm7">
+        <!--View Controller3-->
+        <scene sceneID="neF-yR-AWx">
             <objects>
-                <viewController id="xJi-z6-Rbh" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VV2-BM-RY2" customClass="ViewControllerThree">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController storyboardIdentifier="ViewController3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LP2-RF-qir" customClass="ViewController3" customModule="gridy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QQ3-Eh-RlE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2J5-Ni-szo">
-                                <rect key="frame" x="20" y="234" width="374" height="333"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zOU-kp-p9L">
+                                <rect key="frame" x="20" y="268" width="374" height="361"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cI-Dx-xHo">
+                                <rect key="frame" x="154" y="145" width="178" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="TFs-tv-9lQ"/>
-                        <connections>
-                            <outlet property="gameScreen" destination="2J5-Ni-szo" id="0q3-Ji-0a3"/>
-                        </connections>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ZdU-NB-FcR"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bwb-ed-qAR"/>
+                    <connections>
+                        <outlet property="gameScreen" destination="zOU-kp-p9L" id="cah-qi-h1V"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ywT-ct-arh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0aS-ZF-9gf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1340.5797101449277" y="90.401785714285708"/>
+            <point key="canvasLocation" x="1444.9275362318842" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>

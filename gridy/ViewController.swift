@@ -26,7 +26,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         picker.delegate = self
     }
     
-        
     //MARK: IBActions
     @IBAction func cameraPhoto(_ sender: UIButton) {
         AccessCamera()
@@ -43,10 +42,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let imgIndex = Int.random(in: 0...localImages.count - 1)
         outGoingImage = localImages[imgIndex]
         performSegue(withIdentifier: "segue", sender: self)
-        
     }
         
-    
     func troubleAlert(message: String?) {
         let alert = UIAlertController(title: "Oops...", message: message, preferredStyle: .alert)
         let ok = UIAlertAction(title: "got it", style: .default, handler: nil)
@@ -122,9 +119,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.performSegue(withIdentifier: "segue", sender: self)
         }
     }
-    
-
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segue" {

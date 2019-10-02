@@ -10,12 +10,14 @@ import Foundation
 import UIKit
 
 class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
+ 
     
     // Our received data
     var receivedImage = UIImage()
-    var imageForGridy = UIImage()
-    var outGoingVC3 = UIImage()
-    var userChosenImage = UIImage()
+   
+    
+    var toSend = [UIImage]()
+    
     
     // UIImage
     @IBOutlet weak var selectedImage: UIImageView!
@@ -28,16 +30,8 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
     }
     
     
-//    @IBAction func startButton(_ sender: Any) {
+//    @IBAction func startButton
     
-    @IBAction func startButton(_ sender: Any) {
-    
-    performSegue(withIdentifier: "seguetwo", sender: self)
-        selectedImage.transform = .identity
-    }
-    
-    
-
     
     @IBAction func handlePan(_ recognizer: UIPanGestureRecognizer) {
         guard let recognizerView = recognizer.view else {
@@ -82,39 +76,121 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
         guard let pickedImage = info[.originalImage] as? UIImage else {
             fatalError("Expected a dictionary containing an image, but was provided with the following: \(info)")
         }
-        imageForGridy = pickedImage
-        processPicked(image: imageForGridy)
+        receivedImage = pickedImage
+        processPicked(image: receivedImage)
     }
  // selectedImage
     func processPicked(image: UIImage?) {
-        if let newImage = image {
+        if image != nil {
             performSegue(withIdentifier: "segueTwo", sender: self)
         }
-
+    }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
       }
 
-   }
+    func slice(image: UIImage, into howMany: Int) -> [UIImage] {
+        let width: CGFloat
+        let height: CGFloat
+        
+        switch image.imageOrientation {
+        case .left, .leftMirrored, .right, .rightMirrored:
+            width = image.size.height
+            height = image.size.width
+        default:
+            width = image.size.width
+            height = image.size.height
+        }
+        
+        let tileWidth = Int(width / CGFloat(howMany))
+        let tileHeight = Int(height / CGFloat(howMany))
+        
+        let scale = Int(image.scale)
+        var images = [UIImage]()
+        let cgImage = image.cgImage!
+        
+        var adjustedHeight = tileHeight
+        
+        var y = 0
+        for row in 0 ..< howMany {
+            if row == (howMany - 1) {
+                adjustedHeight = Int(height) - y
+            }
+            var adjustedWidth = tileWidth
+            var x = 0
+            for column in 0 ..< howMany {
+                if column == (howMany - 1) {
+                    adjustedWidth = Int(width) - x
+                }
+                let origin = CGPoint(x: x * scale, y: y * scale)
+                let size = CGSize(width: adjustedWidth * scale, height: adjustedHeight * scale)
+                let tileCGImage = cgImage.cropping(to: CGRect(origin: origin, size: size))!
+                images.append(UIImage(cgImage: tileCGImage, scale: image.scale, orientation: image.imageOrientation))
+                x += tileWidth
+            }
+            y += tileHeight
+        }
+        return images
+    }
+
+
+   
+    func toPass() {
+    if let image = UIImage(named: "sample.jpg") {
+        DispatchQueue.global(qos: .userInitiated).async {
+            // get cropped image
+            self.toSend = self.slice(image: image, into: 6 * 6)
+        }
+    }
+    
+    else {
+        print ("Image not found")
+    }
+
+  }
+    @IBAction func startButton(_ sender: Any) {
+      
+      
+      performSegue(withIdentifier: "segueTwo", sender: self)
+          selectedImage.transform = .identity
+      }
+    
+    
+    // Send cropped images to third view controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Replace "someID" with your storeboard segue ID
+        if segue.identifier == "segueTwo" {
+            // Replace "ThirdViewController" with your second controller class name
+            let vc = segue.destination as! ViewController3
+            vc.toReceive = toSend
+        }
+    }
+
+
+
 }
+//
+
+
 //
 //    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 //        let newImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
 //        if let image = newImage {
-//            imageForGridy = image
+//            toReceive = image
 //        }
 //        picker.dismiss(animated: true) {
-//            self.performSegue(withIdentifier: "segue2", sender: self)
+//            self.performSegue(withIdentifier: "segueTwo", sender: self)
 //        }
 //    }
 //
 //
 //
-//    override func prepare(for segue2: UIStoryboardSegue, sender: Any?) {
-//        if segue2.identifier == "segue2" {
-//            let vc = segue2.destination as! ViewControllerThree
-//            vc.outGoingVC3  = imageForGridy
+//    override func prepare(for segueTwo: UIStoryboardSegue, sender: Any?) {
+//        if segueTwo.identifier == "segueTwo" {
+//            let vc = segueTwo.destination as! ViewController3
+//            vc.toReceive = gameScreen
 //        }
 //    }
-//}
+
+
