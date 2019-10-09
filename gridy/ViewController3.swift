@@ -15,17 +15,11 @@ class ViewController3: UIViewController {
     var collectionOne = [UIImage]()
     var collectionTwo = [UIImage]()
 
-
-    
     override func viewDidLoad() {
         toReceive.shuffle()
         collectionOne = toReceive
-        
+        print(":: DEBUGGING CODE :: \(toReceive.count)")
     }
  
-    
-    
 @IBOutlet weak var gameScreen: UIImageView!
-    
-  
 }

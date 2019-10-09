@@ -113,11 +113,15 @@
         <!--View Controller Two-->
         <scene sceneID="vzc-Ub-JZn">
             <objects>
-                <viewController storyboardIdentifier="ViewControllerTwo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JVK-Il-m53" customClass="ViewControllerTwo" customModule="gridy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerTwo" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JVK-Il-m53" customClass="ViewControllerTwo" customModule="gridy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dXv-JL-Duf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Random-Park" translatesAutoresizingMaskIntoConstraints="NO" id="94R-10-Xdd">
+                                <rect key="frame" x="0.0" y="-19" width="414" height="855"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7BC-dG-VTe" userLabel="startButton">
                                 <rect key="frame" x="129" y="605" width="157" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -145,17 +149,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BX-8f-17y">
-                                <rect key="frame" x="23" y="65" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="BACK"/>
-                            </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yIe-Jr-xXQ">
                                 <rect key="frame" x="20" y="206" width="374" height="370"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b4Z-bc-LT8">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="362"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4c3-0H-YE4">
-                                        <rect key="frame" x="0.0" y="-8" width="374" height="370"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="362"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -168,6 +171,16 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.16697880993150685" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORl-at-dSC">
+                                <rect key="frame" x="322" y="49" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="clear" catalog="system">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="JVK-Il-m53" eventType="touchUpInside" id="uA5-v2-HCF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99991267919540405" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="1ZN-zM-irp"/>
@@ -199,9 +212,9 @@
         <!--View Controller3-->
         <scene sceneID="neF-yR-AWx">
             <objects>
-                <viewController storyboardIdentifier="ViewController3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LP2-RF-qir" customClass="ViewController3" customModule="gridy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController3" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LP2-RF-qir" customClass="ViewController3" customModule="gridy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QQ3-Eh-RlE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zOU-kp-p9L">
@@ -216,7 +229,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ZdU-NB-FcR"/>
                     </view>
                     <navigationItem key="navigationItem" id="bwb-ed-qAR"/>
@@ -234,5 +246,7 @@
         <image name="Gridy-library" width="36" height="28"/>
         <image name="Gridy-name-large-green" width="330" height="160"/>
         <image name="Gridy-name-small-grey" width="70" height="34"/>
+        <image name="Random-Park" width="640" height="640"/>
+        <image name="clear" catalog="system" width="64" height="56"/>
     </resources>
 </document>

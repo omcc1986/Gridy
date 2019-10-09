@@ -9,13 +9,11 @@
 import Foundation
 import UIKit
 
-class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
- 
-    
+class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate
+{
+
     // Our received data
     var receivedImage = UIImage()
-   
-    
     var toSend = [UIImage]()
     
     
@@ -28,10 +26,6 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         selectedImage.image = receivedImage
     }
-    
-    
-//    @IBAction func startButton
-    
     
     @IBAction func handlePan(_ recognizer: UIPanGestureRecognizer) {
         guard let recognizerView = recognizer.view else {
@@ -134,7 +128,12 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
         return images
     }
 
-
+//    var b = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: Selector(("backButton")))
+    
+    @IBAction func backButton(_  sender: Any) {
+   dismiss(animated: true, completion: nil)
+    }
+    
    
     func toPass() {
     if let image = UIImage(named: "sample.jpg") {
@@ -166,31 +165,5 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
             vc.toReceive = toSend
         }
     }
-
-
-
 }
-//
-
-
-//
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        let newImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-//        if let image = newImage {
-//            toReceive = image
-//        }
-//        picker.dismiss(animated: true) {
-//            self.performSegue(withIdentifier: "segueTwo", sender: self)
-//        }
-//    }
-//
-//
-//
-//    override func prepare(for segueTwo: UIStoryboardSegue, sender: Any?) {
-//        if segueTwo.identifier == "segueTwo" {
-//            let vc = segueTwo.destination as! ViewController3
-//            vc.toReceive = gameScreen
-//        }
-//    }
-
 

@@ -14,11 +14,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     //MARK: Variables
     let picker = UIImagePickerController()
-
-//    var outGoingingImage: UIImage?
-
-//    var toPass = UIImage()
-    
     var outGoingImage: UIImage?
     
     override func viewDidLoad() {
