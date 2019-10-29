@@ -9,8 +9,7 @@
 import Foundation
 import UIKit
 
-class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate
-{
+class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
 
     // Our received data
     var receivedImage = UIImage()
@@ -20,11 +19,13 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate
     // UIImage
     @IBOutlet weak var selectedImage: UIImageView!
     
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     // Standard viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedImage.image = receivedImage
+        backgroundImage.image = receivedImage
     }
     
     @IBAction func handlePan(_ recognizer: UIPanGestureRecognizer) {
@@ -48,9 +49,7 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate
         recognizer.rotation = 0
     }
 
-    internal func gestureRecognizer(_  gestureReconizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer)
-    
-    -> Bool {
+    internal func gestureRecognizer(_  gestureReconizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         //condition for simultanious gesture
         if gestureReconizer.view != selectedImage{
             return false
@@ -61,7 +60,6 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate
             || otherGestureRecognizer is UIPanGestureRecognizer{
             return false
         }
-        
         return true
     }
     
@@ -127,34 +125,32 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate
         }
         return images
     }
-
-//    var b = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: Selector(("backButton")))
     
     @IBAction func backButton(_  sender: Any) {
    dismiss(animated: true, completion: nil)
     }
     
-   
-    func toPass() {
-    if let image = UIImage(named: "sample.jpg") {
-        DispatchQueue.global(qos: .userInitiated).async {
-            // get cropped image
-            self.toSend = self.slice(image: image, into: 6 * 6)
+    func toPass(completion: @escaping () -> Void) {
+        if let image = selectedImage.image {
+            NSLog(image.debugDescription)
+            DispatchQueue.global(qos: .userInitiated).async {
+                // get cropped image
+                self.toSend = self.slice(image: image, into: 6 * 6)
+                completion()
+            }
+        } else {
+            print ("Image not found")
         }
     }
     
-    else {
-        print ("Image not found")
-    }
-
-  }
     @IBAction func startButton(_ sender: Any) {
-      
-      
-      performSegue(withIdentifier: "segueTwo", sender: self)
-          selectedImage.transform = .identity
-      }
-    
+        toPass {
+            DispatchQueue.main.async {
+                self.selectedImage.transform = .identity
+                self.performSegue(withIdentifier: "segueTwo", sender: self)
+            }
+        }
+    }
     
     // Send cropped images to third view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

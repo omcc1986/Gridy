@@ -7,57 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9240BBD8-C19E-47C3-9420-F43B75B5A355"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "gridy/ViewControllerTwo.swift"
-            timestampString = "590852917.116999"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "9"
-            endingLineNumber = "9"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DEF06D39-F7F1-40CF-AC32-8306F8C48609"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "gridy/ViewControllerTwo.swift"
-            timestampString = "590852917.118493"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "ViewControllerTwo"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EC280540-F71E-4098-BF54-AB8CCEABD0A8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "gridy/ViewControllerTwo.swift"
-            timestampString = "590852917.119149"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "ViewControllerTwo"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F45F2F79-E937-427E-B25F-C564B41F4695"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -90,65 +39,110 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "92B9E2AD-985A-4F4E-9443-1D02B1EDF151"
+            uuid = "3BE64CEB-73C7-43BC-BDA9-780902BE765B"
             shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "gridy/ViewControllerTwo.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "ViewControllerTwo"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C9AF7BD7-CCD7-450B-9B42-D519F7EA3621"
-            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gridy/ViewController3.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "ViewController3"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "3BE64CEB-73C7-43BC-BDA9-780902BE765B - 8bb6fed2bb702e99"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.ViewController3.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; gridy.ViewController3"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/ViewController3.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "3BE64CEB-73C7-43BC-BDA9-780902BE765B - c0ef43dfced984f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.ViewController3.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; gridy.ViewController3"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/ViewController3.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "187">
+               </Location>
+               <Location
+                  uuid = "3BE64CEB-73C7-43BC-BDA9-780902BE765B - 91e36c5d91ff1d88"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.ViewController3.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;gridy.ViewController3&gt;"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/ViewController3.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "3BE64CEB-73C7-43BC-BDA9-780902BE765B - 42df4b2c91568c41"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.ViewController3.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;gridy.ViewController3&gt;"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/ViewController3.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "3BE64CEB-73C7-43BC-BDA9-780902BE765B - 88444ffb9b2e148a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.ViewController3.__deallocating_deinit"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/ViewController3.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2B74FAD5-292C-4660-B8AB-F32F64CF783B"
+            uuid = "A6DD07FC-C824-48B7-A3E9-3F353CC96B98"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "gridy/ViewControllerTwo.swift"
+            filePath = "gridy/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4"
-            endingLineNumber = "4"
+            startingLineNumber = "2"
+            endingLineNumber = "2"
             landmarkName = "unknown"
             landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4A0888A3-40F0-489E-AF73-D1958BFE94E9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "gridy/ViewControllerTwo.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "processPicked(image:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
