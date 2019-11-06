@@ -82,28 +82,29 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
         picker.dismiss(animated: true, completion: nil)
       }
 
-    func slice(image: UIImage, into howMany: Int) -> [UIImage] {
+    
+    func slice(screenshot: UIImage, into howMany: Int) -> [UIImage] {
         let width: CGFloat
         let height: CGFloat
-        
-        switch image.imageOrientation {
+
+        switch screenshot.imageOrientation {
         case .left, .leftMirrored, .right, .rightMirrored:
-            width = image.size.height
-            height = image.size.width
+            width = screenshot.size.height
+            height = screenshot.size.width
         default:
-            width = image.size.width
-            height = image.size.height
+            width = screenshot.size.width
+            height = screenshot.size.height
         }
-        
+
         let tileWidth = Int(width / CGFloat(howMany))
         let tileHeight = Int(height / CGFloat(howMany))
-        
-        let scale = Int(image.scale)
+
+        let scale = Int(screenshot.scale)
         var images = [UIImage]()
-        let cgImage = image.cgImage!
-        
+        let cgImage = screenshot.cgImage!
+
         var adjustedHeight = tileHeight
-        
+
         var y = 0
         for row in 0 ..< howMany {
             if row == (howMany - 1) {
@@ -118,13 +119,15 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
                 let origin = CGPoint(x: x * scale, y: y * scale)
                 let size = CGSize(width: adjustedWidth * scale, height: adjustedHeight * scale)
                 let tileCGImage = cgImage.cropping(to: CGRect(origin: origin, size: size))!
-                images.append(UIImage(cgImage: tileCGImage, scale: image.scale, orientation: image.imageOrientation))
+                images.append(UIImage(cgImage: tileCGImage, scale: screenshot.scale, orientation: screenshot.imageOrientation))
                 x += tileWidth
             }
             y += tileHeight
         }
         return images
     }
+   
+   
     
     @IBAction func backButton(_  sender: Any) {
    dismiss(animated: true, completion: nil)
@@ -135,7 +138,7 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
             NSLog(image.debugDescription)
             DispatchQueue.global(qos: .userInitiated).async {
                 // get cropped image
-                self.toSend = self.slice(image: image, into: 6 * 6)
+                self.toSend = self.slice(screenshot:image, into: 4)
                 completion()
             }
         } else {
