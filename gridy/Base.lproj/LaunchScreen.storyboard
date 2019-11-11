@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -13,18 +13,22 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gridy-name-large-green" translatesAutoresizingMaskIntoConstraints="NO" id="2jO-Ug-vRU">
-                                <rect key="frame" x="42" y="305" width="330" height="160"/>
+                                <rect key="frame" x="42" y="273.66666666666669" width="330" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="UMq-9Q-8Go"/>
+                                    <constraint firstAttribute="width" constant="330" id="WvV-kT-auk"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Gridy!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBY-sR-TGX">
-                                <rect key="frame" x="133" y="473" width="149" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Gridy!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBY-sR-TGX">
+                                <rect key="frame" x="112" y="407" width="149" height="20"/>
                                 <color key="tintColor" red="0.95382791759999996" green="0.91435283420000002" blue="0.82385677099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -33,14 +37,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aBY-sR-TGX" secondAttribute="bottom" constant="369" id="JCm-n8-5Xb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2jO-Ug-vRU" secondAttribute="trailing" constant="42" id="Kbn-6R-fZJ"/>
-                            <constraint firstItem="aBY-sR-TGX" firstAttribute="top" secondItem="2jO-Ug-vRU" secondAttribute="bottom" constant="8" id="QNO-dm-gAK"/>
-                            <constraint firstItem="2jO-Ug-vRU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="261" id="Ut2-Cs-uPd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aBY-sR-TGX" secondAttribute="trailing" constant="132" id="hay-vE-7ZG"/>
-                            <constraint firstItem="aBY-sR-TGX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="w2I-Es-Hmw"/>
-                            <constraint firstItem="aBY-sR-TGX" firstAttribute="top" secondItem="2jO-Ug-vRU" secondAttribute="bottom" constant="8" id="xIg-ML-ay2"/>
-                            <constraint firstItem="2jO-Ug-vRU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="yVK-6s-3By"/>
+                            <constraint firstItem="2jO-Ug-vRU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-14.5" id="Ngl-ro-LUS"/>
+                            <constraint firstItem="aBY-sR-TGX" firstAttribute="top" secondItem="2jO-Ug-vRU" secondAttribute="bottom" constant="8" id="U92-Xw-Bkx"/>
+                            <constraint firstItem="aBY-sR-TGX" firstAttribute="centerX" secondItem="2jO-Ug-vRU" secondAttribute="centerX" constant="-20" id="erJ-uY-oUa"/>
+                            <constraint firstItem="2jO-Ug-vRU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="owD-26-ZfS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
