@@ -313,13 +313,13 @@
                                 <rect key="frame" x="30" y="151" width="354" height="284"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="K7I-a3-L9Q">
-                                    <size key="itemSize" width="114" height="104"/>
+                                    <size key="itemSize" width="90" height="90"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="VgL-rQ-gPw" customClass="GridyCell" customModule="gridy" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="VgL-rQ-gPw" customClass="GridyCell" customModule="gridy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Mz2-uz-3tI">
@@ -334,6 +334,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="90" height="90"/>
                                         <connections>
+                                            <outlet property="Cell" destination="Mz2-uz-3tI" id="jjh-xk-Qg4"/>
                                             <outlet property="imageView" destination="DIu-Z8-UvW" id="Wve-94-n9X"/>
                                         </connections>
                                     </collectionViewCell>
@@ -395,7 +396,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="QY2-Ms-gzI"/>
                     <connections>
-                        <outlet property="collectionView" destination="hKa-uP-1GD" id="O17-1Z-8PC"/>
+                        <outlet property="firstCollectionView" destination="hKa-uP-1GD" id="7Eh-q6-JUz"/>
+                        <outlet property="gameCollectionView" destination="0dq-Co-sEA" id="Ozw-nh-XQX"/>
+                        <outlet property="movesCount" destination="MqU-Jh-Mda" id="RxI-dI-NnN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wf-u7-nl0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
