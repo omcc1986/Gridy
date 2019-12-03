@@ -39,6 +39,7 @@ class ViewController3: UIViewController, UICollectionViewDataSource,
         collectionOne.shuffle()
         print(":: DEBUGGING CODE :: \(toReceive.count)")
 
+     
     // setting collection view delegates & data sources
    firstCollectionView.dataSource = self
    firstCollectionView.dragDelegate = self

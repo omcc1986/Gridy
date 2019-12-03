@@ -15,6 +15,7 @@
 		079AE0A022E87CDA00A207A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 079AE09F22E87CDA00A207A1 /* Assets.xcassets */; };
 		079AE0A322E87CDA00A207A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 079AE0A122E87CDA00A207A1 /* LaunchScreen.storyboard */; };
 		07BEBE292373526900008B88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BEBE282373526900008B88 /* Main.storyboard */; };
+		07DB312B23963B3600A6E242 /* gameCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DB312A23963B3600A6E242 /* gameCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		079AE0A222E87CDA00A207A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		079AE0A422E87CDA00A207A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07BEBE282373526900008B88 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		07DB312A23963B3600A6E242 /* gameCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				070E3D91230D1E8800EDBD16 /* ViewControllerTwo.swift */,
 				0704B214233918DB008BC980 /* ViewController3.swift */,
 				078EAEA722EB51CC00971C47 /* pictureUploadEdit.swift */,
+				07DB312A23963B3600A6E242 /* gameCollectionView.swift */,
 				07BEBE282373526900008B88 /* Main.storyboard */,
 				079AE09F22E87CDA00A207A1 /* Assets.xcassets */,
 				079AE0A122E87CDA00A207A1 /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			files = (
 				079AE09B22E87CD700A207A1 /* ViewController.swift in Sources */,
 				0704B215233918DB008BC980 /* ViewController3.swift in Sources */,
+				07DB312B23963B3600A6E242 /* gameCollectionView.swift in Sources */,
 				078EAEA822EB51CC00971C47 /* pictureUploadEdit.swift in Sources */,
 				079AE09922E87CD700A207A1 /* AppDelegate.swift in Sources */,
 				070E3D92230D1E8800EDBD16 /* ViewControllerTwo.swift in Sources */,
