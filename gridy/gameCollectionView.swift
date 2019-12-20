@@ -29,7 +29,7 @@ extension gameCollectionView: UICollectionViewDataSource  {
         
 extension gameCollectionView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let largeCell = gameCollectionView.dequeueReusableCell(withReuseIdentifier: "largeCell", for: indexPath) as! GridyCell
+        let largeCell = images.dequeueReusableCell(withReuseIdentifier: "largeCell", for: indexPath) as! GridyCell
             largeCell.imageView.image = images[indexPath.item]
 //
             return UICollectionViewCell()
@@ -88,7 +88,7 @@ extension gameCollectionView: UICollectionViewDropDelegate {
                 }
             })
                 coordinator.drop(items.first!.dragItem, toItemAt: destinationIndexPath)
-            if rightMoves == collectionTwo.count {
+            if rightMoves == gameCollectionView.count {
                 print ("gameover screen")
             }
         }
@@ -102,8 +102,8 @@ extension gameCollectionView: UICollectionViewDropDelegate {
                     dIndexPath.row = collectionView.numberOfItems(inSection: 0) - 1
                 }
                 collectionView.performBatchUpdates({
-                    self.collectionOne.remove(at: sourceIndexPath.row)
-                    self.collectionOne.insert(item.dragItem.localObject as! UIImage, at: dIndexPath.row)
+                    self.images.remove(at: sourceIndexPath.row)
+                    self.images.insert(item.dragItem.localObject as! UIImage, at: dIndexPath.row)
                     collectionView.deleteItems(at: [sourceIndexPath])
                     collectionView.insertItems(at: [dIndexPath])
                 })

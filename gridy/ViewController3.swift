@@ -39,11 +39,17 @@ class ViewController3: UIViewController {
        
         
     // setting collection view delegates & data sources
+    
+    firstCollectionView.delegate = self
     firstCollectionView.dataSource = self
+    firstCollectionView.dragDelegate = self
+    firstCollectionView.dragInteractionEnabled = true
+  
+        
 //  gameCollectionView.dropDelegate = ?
 //  firstCollectionView.dropDelegate = ?
 //  gameCollectionView.dataSource = ?
-    firstCollectionView.dragDelegate = self
+    
     gameCollectionView.dragDelegate = self
     // not allowing collection views to scroll
     firstCollectionView.isScrollEnabled = false
@@ -52,7 +58,7 @@ class ViewController3: UIViewController {
     gameCollectionView.reloadData()
 
 //     enabling drag on collection views
-    firstCollectionView.dragInteractionEnabled = true
+   
     gameCollectionView.dragInteractionEnabled = true
   }
 }
@@ -73,12 +79,11 @@ extension ViewController3 : UICollectionViewDelegate{
 
 extension ViewController3: UICollectionViewDragDelegate{
     func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
-    let item = collectionView == firstCollectionView
-    toReceive[indexPath.row] : collectionTwo[indexPath.row]
-    let itemProvider = NSItemProvider(object: item as UIImage)
-    let dragItem = UIDragItem(itemProvider: itemProvider)
-    dragItem.localObject = item
-    return [dragItem]
+        let item = self.items[indexPath.row]
+        let itemProvider = NSItemProvider(object: item as UIImage)
+        let dragItem = UIDragItem(itemProvider: itemProvider)
+        dragItem.localObject = item
+        return [dragItem]
       
      }
    }

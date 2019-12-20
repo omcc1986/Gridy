@@ -32,8 +32,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
             endingLineNumber = "18"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "ViewController3"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "3BE64CEB-73C7-43BC-BDA9-780902BE765B - 8bb6fed2bb702e99"
@@ -189,8 +189,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
             endingLineNumber = "31"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "9776D6B0-0968-4168-991C-D16639A4AAFD - c0ef43dfced984f"
