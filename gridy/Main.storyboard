@@ -238,6 +238,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="94R-10-Xdd" id="Y8O-yH-PZz"/>
+                        <outlet property="container" destination="b4Z-bc-LT8" id="k4k-Ft-7f5"/>
                         <outlet property="selectedImage" destination="4c3-0H-YE4" id="8BU-BN-D0K"/>
                         <segue destination="TyW-0p-75p" kind="show" identifier="segueTwo" id="Won-Vm-5Gu"/>
                     </connections>

@@ -18,8 +18,9 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
     
     // UIImage
     @IBOutlet weak var selectedImage: UIImageView!
-    
     @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var container: UIImageView!
+    
     
     // Standard viewDidLoad()
     override func viewDidLoad() {
@@ -145,6 +146,48 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
             print ("Image not found")
         }
     }
+    
+    func drawing() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: selectedImage.frame.width, height: selectedImage.frame.height))
+       
+//    Warning not used
+//        let gridDrawer = receivedImage
+        let image = renderer.image { (ctx) in
+            if view.frame.width < view.frame.height {
+        let squareDimension = view.frame.width * 0.9
+            selectedImage.frame = CGRect(x: (view.frame.width - squareDimension)/2, y: (view.frame.height - squareDimension)/2, width: squareDimension, height: squareDimension)
+
+//           ERROR
+                
+//           container.selectedImage(context: ctx, squareDimension: squareDimension - 1)
+
+        } else {
+            // landscape orientation
+        let squareDimension = view.frame.height*0.9
+                container.frame = CGRect(x: (view.frame.width - squareDimension)/2, y: (view.frame.height - squareDimension)/2, width: squareDimension, height: squareDimension)
+                // passing squareDimension - 1 to protect grid lines from being clipped at the edges
+//                gridDrawer.toSend(context: ctx, squareDimension: squareDimension - 1)
+            }
+        }
+        // populate the gridView view with the rendered image
+        selectedImage.image = image
+    }
+//     ERROR within the Crop
+    
+//    // Function to take a screenshot the size of cropImageBoxView
+//    func cropImage() -> UIImage {
+//        UIGraphicsBeginImageContextWithOptions(container.bounds.size, false, 0)selectedImage.drawHierarchy(in: selectedImage.bounds, afterScreenUpdates: true)
+//        let screenShot = UIGraphicsGetImageFromCurrentImageContext()!
+//        UIGraphicsEndImageContext()
+//        return screenShot
+//    }
+
+ 
+    func configure() {
+        drawing()
+        container.image = receivedImage
+    }
+    
     
     @IBAction func startButton(_ sender: Any) {
         toPass {

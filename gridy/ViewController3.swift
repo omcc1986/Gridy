@@ -14,8 +14,7 @@ class GridyCell: UICollectionViewCell {
     @IBOutlet weak var Cell: UIView!
 }
 
-class ViewController3: UIViewController, UICollectionViewDataSource,
-    UICollectionViewDelegate, UIDropInteractionDelegate, UICollectionViewDragDelegate {
+class ViewController3: UIViewController {
     
     //variables
     var toReceive = [UIImage]() // keep correct order for comparison
@@ -32,56 +31,61 @@ class ViewController3: UIViewController, UICollectionViewDataSource,
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-//
+
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionOne = toReceive
         collectionOne.shuffle()
-        print(":: DEBUGGING CODE :: \(toReceive.count)")
-
-     
-    // setting collection view delegates & data sources
-   firstCollectionView.dataSource = self
-   firstCollectionView.dragDelegate = self
-   gameCollectionView.dragDelegate = self
-//   gameCollectionView.dropDelegate = ?
-//   firstCollectionView.dropDelegate = ?
-//   gameCollectionView.dataSource = ?
+       
         
+    // setting collection view delegates & data sources
+    firstCollectionView.dataSource = self
+//  gameCollectionView.dropDelegate = ?
+//  firstCollectionView.dropDelegate = ?
+//  gameCollectionView.dataSource = ?
+    firstCollectionView.dragDelegate = self
+    gameCollectionView.dragDelegate = self
     // not allowing collection views to scroll
     firstCollectionView.isScrollEnabled = false
     gameCollectionView.isScrollEnabled = false
    
-        gameCollectionView.reloadData()
+    gameCollectionView.reloadData()
 
 //     enabling drag on collection views
     firstCollectionView.dragInteractionEnabled = true
     gameCollectionView.dragInteractionEnabled = true
+  }
 }
 
-     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+extension ViewController3: UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return self .collectionOne.count
-}
+   }
+  }
 
-     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+extension ViewController3 : UICollectionViewDelegate{
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
      let cell = firstCollectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! GridyCell
     cell.imageView.image = collectionOne[indexPath.item]
     return cell
     }
+  }
 
- 
-func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
-    let item = collectionView == firstCollectionView ?
+extension ViewController3: UICollectionViewDragDelegate{
+    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+    let item = collectionView == firstCollectionView
     toReceive[indexPath.row] : collectionTwo[indexPath.row]
     let itemProvider = NSItemProvider(object: item as UIImage)
     let dragItem = UIDragItem(itemProvider: itemProvider)
     dragItem.localObject = item
     return [dragItem]
-        
-    }
+      
+     }
+   }
     
+extension ViewController3: UIDropInteractionDelegate {
     // Drop Session
-        func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
+    func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
             if destinationIndexPath?.row == 16 || destinationIndexPath?.row == 17 {
                 return UICollectionViewDropProposal(operation: .forbidden)
             } else if collectionView === firstCollectionView  {
@@ -91,9 +95,8 @@ func collectionView(_ collectionView: UICollectionView, itemsForBeginning sessio
             } else {
                 return UICollectionViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
             }
-        }
-        
-        func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+    }
+    func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
             let dip: IndexPath
             if let indexPath = coordinator.destinationIndexPath {
                 dip = indexPath
@@ -147,7 +150,7 @@ func collectionView(_ collectionView: UICollectionView, itemsForBeginning sessio
             }
         }
         
-        func reorderItems(coordinator: UICollectionViewDropCoordinator, destinationIndexPath: IndexPath, collectionView: UICollectionView) {
+    func reorderItems(coordinator: UICollectionViewDropCoordinator, destinationIndexPath: IndexPath, collectionView: UICollectionView) {
             let items = coordinator.items
             if items.count == 1, let item = items.first, let sourceIndexPath = item.sourceIndexPath {
                 var dIndexPath = destinationIndexPath
