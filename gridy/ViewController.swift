@@ -24,7 +24,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func unwindToStart(_ sender: UIStoryboardSegue) {
       }
   
-    
     //MARK: IBActions
     @IBAction func cameraPhoto(_ sender: UIButton) {
         AccessCamera()

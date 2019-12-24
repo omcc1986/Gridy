@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -263,10 +263,10 @@
             </objects>
             <point key="canvasLocation" x="647.82608695652175" y="85.714285714285708"/>
         </scene>
-        <!--View Controller3-->
+        <!--Game View Controller-->
         <scene sceneID="jwy-Nj-OmE">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="TyW-0p-75p" customClass="ViewController3" customModule="gridy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="TyW-0p-75p" customClass="GameViewController" customModule="gridy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6c6-Sa-2QH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -314,30 +314,7 @@
                                     <constraint firstAttribute="width" constant="105" id="kIA-f8-ExS"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0dq-Co-sEA">
-                                <rect key="frame" x="26" y="400" width="362" height="392"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="suK-fQ-Ypz">
-                                    <size key="itemSize" width="111" height="114"/>
-                                    <size key="estimatedItemSize" width="102" height="97"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="largeCell" id="dgD-8P-kLi">
-                                        <rect key="frame" x="0.0" y="0.0" width="111" height="114"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UeL-7Y-Uoy">
-                                            <rect key="frame" x="0.0" y="0.0" width="111" height="114"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.84999999999999998"/>
-                                        <size key="customSize" width="111" height="114"/>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" id="hKa-uP-1GD" userLabel="cropped">
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" id="hKa-uP-1GD" userLabel="cropped" customClass="TopCollectionView" customModule="gridy" customModuleProvider="target">
                                 <rect key="frame" x="26" y="130" width="362" height="185"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -371,10 +348,29 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="TyW-0p-75p" id="shq-O8-Kas"/>
-                                    <outlet property="delegate" destination="TyW-0p-75p" id="0tx-i3-oPt"/>
-                                </connections>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0dq-Co-sEA" customClass="BottomCollectionView" customModule="gridy" customModuleProvider="target">
+                                <rect key="frame" x="26" y="400" width="362" height="392"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="suK-fQ-Ypz">
+                                    <size key="itemSize" width="111" height="114"/>
+                                    <size key="estimatedItemSize" width="102" height="97"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="largeCell" id="dgD-8P-kLi">
+                                        <rect key="frame" x="0.0" y="0.0" width="111" height="114"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UeL-7Y-Uoy">
+                                            <rect key="frame" x="0.0" y="0.0" width="111" height="114"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.84999999999999998"/>
+                                        <size key="customSize" width="111" height="114"/>
+                                    </collectionViewCell>
+                                </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag pieces to the grid                      swipe out of the grid to undo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99W-Cg-2jW">
                                 <rect key="frame" x="90" y="360" width="233" height="40"/>
@@ -413,9 +409,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="QY2-Ms-gzI"/>
                     <connections>
-                        <outlet property="firstCollectionView" destination="hKa-uP-1GD" id="7Eh-q6-JUz"/>
-                        <outlet property="gameCollectionView" destination="0dq-Co-sEA" id="Ozw-nh-XQX"/>
-                        <outlet property="movesCount" destination="MqU-Jh-Mda" id="RxI-dI-NnN"/>
+                        <outlet property="bottomCollectionView" destination="0dq-Co-sEA" id="amd-Zd-6p3"/>
+                        <outlet property="topColletionView" destination="hKa-uP-1GD" id="VO3-8u-bKn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wf-u7-nl0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

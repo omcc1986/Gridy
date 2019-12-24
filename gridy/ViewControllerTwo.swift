@@ -203,8 +203,8 @@ class ViewControllerTwo: UIViewController, UIGestureRecognizerDelegate {
         // Replace "someID" with your storeboard segue ID
         if segue.identifier == "segueTwo" {
             // Replace "ThirdViewController" with your second controller class name
-            let vc = segue.destination as! ViewController3
-            vc.toReceive = toSend
+            let vc = segue.destination as! GameViewController
+            vc.received = toSend
         }
     }
 }
