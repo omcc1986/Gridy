@@ -12,7 +12,7 @@ class BottomCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
     
     public var correctImages: [UIImage]!
     public var images: [UIImage]!
-    static private let kID = "identifier"   // Change to your identifier on the storyboard
+    static private let kID = "largeCell"   // Change to your identifier on the storyboard
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)

@@ -60,8 +60,8 @@ class TopCollectionView: UICollectionView, UICollectionViewDelegate, UICollectio
  
 extension TopCollectionView: UICollectionViewDragDelegate {
     func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at IndexPath: IndexPath) -> [UIDragItem] {
-        let item = self.items[IndexPath.row]
-        let itemProvider = NSItemProvider(object: item as NSString)
+        let item = self.images[IndexPath.row]
+        let itemProvider = NSItemProvider(object: item as UIImage)
         let dragItem = UIDragItem(itemProvider: itemProvider)
         dragItem.localObject = item
         return [dragItem]
@@ -70,7 +70,7 @@ extension TopCollectionView: UICollectionViewDragDelegate {
 
 extension TopCollectionView: UICollectionViewDropDelegate {
    func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
-         if collectionView.hasActiveDrag {
+        if collectionView.hasActiveDrag {
         return UICollectionViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
             
         }
@@ -78,15 +78,18 @@ extension TopCollectionView: UICollectionViewDropDelegate {
         }
     
     func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
-        let destinationIndexPath = coordinator.destinationIndexPath
         
-        guard let indexPath = destinationIndexPath else {return }
-        
-        if coordinator.proposal.operation == .move {
-            self.reorderItems(coordinator: coordinator, destinationIndexPath: indexPath, collectionView: collectionView)
-        }
-    }
-}
+        let destinationIndexPath: IndexPath
+        if let indexPath = coordinator.destinationIndexPath{
+                   destinationIndexPath = indexPath
+            }
+        else{
+            destinationIndexPath = IndexPath(row: 0, section: 0)
+            }
+        self.collectionView.moveItem(at: (coordinator.items.first?.sourceIndexPath)!, to: destinationIndexPath)
+                    }
+                }
+
     
     
       
