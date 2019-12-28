@@ -20,7 +20,7 @@ class BottomCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
         dataSource = self
         dropDelegate = self
     }
-    
+   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }

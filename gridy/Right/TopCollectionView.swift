@@ -38,20 +38,19 @@ class TopCollectionView: UICollectionView, UICollectionViewDelegate, UICollectio
                 print("Starting Index: \(sourceIndexPath.item)")
                 print("Ending Index: \(destinationIndexPath.item)")
             }
-        
         return cell
     }
   
-    fileprivate func reorderItems(coordinator: UICollectionViewDropDelegate, destinationIndexPath: IndexPath, collectionView: UICollectionView){
-        if let item = coordinator.item.first,
+    fileprivate func reorderItems(coordinator: UICollectionViewDropCoordinator, destinationIndexPath: IndexPath, collectionView: UICollectionView){
+        if let item = coordinator.items.first,
             let sourceIndexPath = item.sourceIndexPath  {
                 
-                collectionView.performBatchUpdates({
-                    self.items.remove(at: sourceIndexPath.item)
-                    self.items.insert(item.dragItem.localObject as! String, at: destinationIndexPath.item)
+        collectionView.performBatchUpdates({
+            images.remove(at: sourceIndexPath.item)
+            images.insert(item.dragItem.localObject as! UIImage, at: destinationIndexPath.item)
             
-                    collectionView.deleteItems(at: [sourceIndexPath])
-                    collectionView.insertItems(at: [destinationIndexPath ] )
+        collectionView.deleteItems(at: [sourceIndexPath])
+            collectionView.insertItems(at: [destinationIndexPath ] )
             }, completion: nil)
             coordinator.drop(item.dragItem, toItemAt: destinationIndexPath )
         }
@@ -86,7 +85,7 @@ extension TopCollectionView: UICollectionViewDropDelegate {
         else{
             destinationIndexPath = IndexPath(row: 0, section: 0)
             }
-        self.collectionView.moveItem(at: (coordinator.items.first?.sourceIndexPath)!, to: destinationIndexPath)
+        collectionView.moveItem(at: (coordinator.items.first?.sourceIndexPath)!, to: destinationIndexPath)
                     }
                 }
 
