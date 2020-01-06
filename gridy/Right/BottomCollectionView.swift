@@ -22,8 +22,10 @@ class BottomCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
     }
    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return 
+        
     }
+
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BottomCollectionView.kID, for: indexPath)
