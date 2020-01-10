@@ -22,8 +22,7 @@ class BottomCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
     }
    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 
-        
+        return images.count
     }
 
     
