@@ -318,6 +318,7 @@
                                 <rect key="frame" x="26" y="130" width="362" height="185"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="LPg-hJ-hAV"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="ZEN-83-aqf"/>
@@ -343,8 +344,8 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="146" height="143"/>
                                         <connections>
-                                            <outlet property="Cell" destination="Mz2-uz-3tI" id="jjh-xk-Qg4"/>
-                                            <outlet property="imageView" destination="DIu-Z8-UvW" id="Wve-94-n9X"/>
+                                            <outlet property="cell" destination="Mz2-uz-3tI" id="dlb-X5-c2v"/>
+                                            <outlet property="imageView" destination="DIu-Z8-UvW" id="W8e-BC-jwb"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -352,6 +353,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0dq-Co-sEA" customClass="BottomCollectionView" customModule="gridy" customModuleProvider="target">
                                 <rect key="frame" x="26" y="400" width="362" height="392"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="suK-fQ-Ypz">
                                     <size key="itemSize" width="111" height="114"/>
                                     <size key="estimatedItemSize" width="102" height="97"/>
@@ -385,7 +387,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hKa-uP-1GD" firstAttribute="top" secondItem="MqU-Jh-Mda" secondAttribute="bottom" constant="20" id="5w4-0A-onJ"/>
                             <constraint firstItem="V3d-Nf-uHu" firstAttribute="trailing" secondItem="99W-Cg-2jW" secondAttribute="trailing" constant="91" id="6dP-mV-vnX"/>

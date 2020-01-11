@@ -11,7 +11,7 @@ import UIKit
 class BottomCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource {
     
     public var correctImages: [UIImage]!
-    public var images: [UIImage]!
+    public var images: [UIImage] = []
     static private let kID = "largeCell"   // Change to your identifier on the storyboard
     
     override func draw(_ rect: CGRect) {
@@ -25,7 +25,6 @@ class BottomCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
         return images.count
     }
 
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BottomCollectionView.kID, for: indexPath)
         

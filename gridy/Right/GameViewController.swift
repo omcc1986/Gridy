@@ -8,6 +8,11 @@
 
 import UIKit
 
+class GridyCell: UICollectionViewCell {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var Cell: UIView!
+}
+
 public class GameViewController: UIViewController {
     
     
@@ -15,13 +20,12 @@ public class GameViewController: UIViewController {
     @IBOutlet private weak var bottomCollectionView: BottomCollectionView!
     
     public var received: [UIImage]!
-
+    static var identifier: String = "Cell"
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         
         topColletionView.images = received.shuffled()
         bottomCollectionView.correctImages = received
-        
     }
-
-}
+  }
