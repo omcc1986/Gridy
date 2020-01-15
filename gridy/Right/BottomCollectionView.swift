@@ -10,6 +10,7 @@ import UIKit
 
 class BottomCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet weak var largeCellEmptyImage: UIImageView!
     public var correctImages: [UIImage]!
     public var images: [UIImage] = []
     static private let kID = "largeCell"   // Change to your identifier on the storyboard
@@ -26,20 +27,33 @@ class BottomCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BottomCollectionView.kID, for: indexPath)
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BottomCollectionView.kID, for: indexPath) as! GridyCell
+          cell.imageView.image = images[indexPath.item]
+        return cell
         // Configure Cell Here
         
-        return cell
+      
     }
 }
 
 extension BottomCollectionView: UICollectionViewDropDelegate {
     
     func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+            let destinationIndexPath: IndexPath
+            if let indexPath = coordinator.destinationIndexPath {
+                destinationIndexPath = indexPath
+            } else {
+                destinationIndexPath = IndexPath(row: 0, section: 0)
+            }
+            collectionView.moveItem(at: coordinator.items.first!.sourceIndexPath!, to: destinationIndexPath)
+   }
+}
+            
+        
+        // Configure Cell Here
+        
         
         // Configure drop here
         // Handle score here
         
-    }
-}
+ 

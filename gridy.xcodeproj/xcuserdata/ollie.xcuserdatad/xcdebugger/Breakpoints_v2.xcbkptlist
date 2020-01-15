@@ -251,10 +251,227 @@
             filePath = "gridy/Right/BottomCollectionView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "draw(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59FEFDAE-50B8-457A-B2F2-01CA8B84BFE5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gridy/Right/GameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "GridyCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "59FEFDAE-50B8-457A-B2F2-01CA8B84BFE5 - f396b3236c75fb8f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.GridyCell.imageView.getter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/Right/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "59FEFDAE-50B8-457A-B2F2-01CA8B84BFE5 - 9ee5277482a327cb"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.GridyCell.imageView.setter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/Right/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "59FEFDAE-50B8-457A-B2F2-01CA8B84BFE5 - 218cb2dbc86fc280"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.GridyCell.imageView.modify : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/Right/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "59FEFDAE-50B8-457A-B2F2-01CA8B84BFE5 - edf29364e8b79b5e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.GridyCell.imageView.modify : Swift.Optional&lt;__C.UIImageView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/Right/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "59FEFDAE-50B8-457A-B2F2-01CA8B84BFE5 - add62d766b67c54c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.GridyCell.init(frame: __C.CGRect) -&gt; gridy.GridyCell"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/Right/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "59FEFDAE-50B8-457A-B2F2-01CA8B84BFE5 - 3125d494fb20daf0"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.GridyCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;gridy.GridyCell&gt;"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/Right/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E5292F70-8F9F-493C-9DE5-DA0EC42D08D1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gridy/Right/GameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "GridyCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27199D05-9C4E-43EE-A5D8-007B632E44F5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gridy/Right/GameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "GridyCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "27199D05-9C4E-43EE-A5D8-007B632E44F5 - 316cec8bd4b812b4"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.GridyCell.__allocating_init(frame: __C.CGRect) -&gt; gridy.GridyCell"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/Right/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "10">
+               </Location>
+               <Location
+                  uuid = "27199D05-9C4E-43EE-A5D8-007B632E44F5 - add62d766b67c54c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.GridyCell.init(frame: __C.CGRect) -&gt; gridy.GridyCell"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/Right/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "27199D05-9C4E-43EE-A5D8-007B632E44F5 - 60377a74ab428738"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.GridyCell.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;gridy.GridyCell&gt;"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/Right/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "27199D05-9C4E-43EE-A5D8-007B632E44F5 - 3125d494fb20daf0"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.GridyCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;gridy.GridyCell&gt;"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/Right/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "27199D05-9C4E-43EE-A5D8-007B632E44F5 - 5b6867a4dc17beb0"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gridy.GridyCell.__deallocating_deinit"
+                  moduleName = "gridy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ollie/Desktop/origin%20repository%20/Gridy/gridy/Right/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

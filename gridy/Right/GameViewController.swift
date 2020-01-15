@@ -13,6 +13,7 @@ class GridyCell: UICollectionViewCell {
     @IBOutlet weak var Cell: UIView!
 }
 
+
 public class GameViewController: UIViewController {
     
     
@@ -20,7 +21,9 @@ public class GameViewController: UIViewController {
     @IBOutlet private weak var bottomCollectionView: BottomCollectionView!
     
     public var received: [UIImage]!
-    static var identifier: String = "Cell"
+    static var identifier: String = "largeCell"
+    
+    
     
     override public func viewDidLoad() {
         super.viewDidLoad()
