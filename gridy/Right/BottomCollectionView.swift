@@ -9,83 +9,86 @@
 import UIKit
 
 class BottomCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+     
     @IBOutlet weak var largeCellEmptyImage: UIImageView!
+    
     public var correctImages: [UIImage]!
-    public var images: [UIImage]! = [UIImage] ()
+    fileprivate var imageArray: [String] = ["dummyCell1","dummyCell2","dummyCell3","dummyCell4","dummyCell5","dummyCell6","dummyCell7","dummyCell8","dummyCell9","dummyCell10","dummyCell11" ,"dummyCell12"]
+    
+    private var gridLocations = [CGPoint]()
     static private let kID = "largeCell"   // Change to your identifier on the storyboard
-    
-    
-         
-    
-    required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
-    
+ 
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         delegate = self
         dataSource = self
         dropDelegate = self
     }
-   
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return imageArray.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BottomCollectionView.kID, for: indexPath) as! GridyCell
-          cell.imageView.image = images[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BottomCollectionView.kID, for: indexPath)
+//            as! GridyCell
+        cell.backgroundColor = .white
+        print(indexPath)
+        let image = UIImage(named: self.imageArray[indexPath.row])
+      let cellImage = UIImageView(image: image)
+     cell.contentView.addSubview(cellImage)
         return cell
+       }
     }
-}
+
 
 extension BottomCollectionView: UICollectionViewDropDelegate {
-    
+   
     
     func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
- print ("correctImages [index.row]")
-        guard let index = coordinator.destinationIndexPath else { return }
-        guard let dropItem = coordinator.items.first else { return
-            
-    
-    func dragItems(for indexPath: IndexPath) -> [UIDragItem] {
-        let item = images[indexPath.item]
-        let itemProvider = NSItemProvider(object: item as UIImage)
-        let dragItem = UIDragItem(itemProvider: itemProvider)
-            dragItem.localObject = item
-        return [dragItem]
-        }
-        
- 
-    func addItem(_ newItem: UIImage, at index: Int) {
-        images.insert(newItem, at: index)
-        }
-        
-    func deleteItem(at sourceIndex: Int) {
-        images.remove(at: sourceIndex)
-        }
-        
-    func moveItem(at sourceIndex: Int, to destinationIndex: Int) {
-        guard sourceIndex != destinationIndex else { return }
-        let item = images[sourceIndex]
-           images.insert(item, at: destinationIndex)
-            images.remove(at: sourceIndex)
-        }
-        
-    func swapItem(at sourceIndex: Int, to destinationIndex: Int) {
-            guard sourceIndex != destinationIndex else { return }
-        images.swapAt(sourceIndex, destinationIndex)
-        }
-        
-    func getItemAtIndex(indexPath: Int) -> UIImage? {
-        return images[indexPath]
-        }
-      }
-  }
+     
+        let destinationIndexPath = coordinator.destinationIndexPath ?? IndexPath(item: 0, section: 0)
+        coordinator.session.loadObjects(ofClass: (UIImage.self), completion: { (images) in
+            for photo in images {
+                self.correctImages.insert(photo as! UIImage, at: destinationIndexPath.item)
+                collectionView.performBatchUpdates({
+                    collectionView.insertItems(at: [destinationIndexPath])
+                })
+            }
+        })
+    }
 }
-            
-        /// Check if image at drop == correctimages[index.row]
+    
+//
+//    func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+//        guard (coordinator.destinationIndexPath) != nil else { return }
+//        guard coordinator.items.first != nil else { return}
+//     }
+//  }
+
+      
+ 
+    /// Check if image at drop
         /// If it is, you are going to drop it in at index.row
         
 
     
     
+   
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+   
+    
+    
+    
+    
+

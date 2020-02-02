@@ -28,7 +28,7 @@ class TopCollectionView: UICollectionView, UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath as IndexPath) as! GridyCell
-        cell.imageView.image = images[indexPath.item]
+        cell.imageView!.image = images[indexPath.item]
         return cell
     }
         
